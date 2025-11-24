@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, Navigate } from "react-router-dom";
+import { useParams, Navigate, NavLink } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import { createClient } from "@supabase/supabase-js";
@@ -164,7 +164,7 @@ function ProductPage(){
                     <p className="text-sm text-gray-600">Contact us for pricing, lead time, and customization.</p>
                 </div>
                 <div className="flex gap-3">
-                    <a href={`../contact?product=${slug}`} className="px-4 py-2 bg-orange-400 text-white rounded-md shadow">Get Quote</a>
+                    <NavLink to={`/contact?product=${slug}`} className="px-4 py-2 bg-orange-400 text-white rounded-md shadow">Get Quote</NavLink>
                     <a href="mailto:orders.deva@gmail.com" className="px-4 py-2 border rounded-md">Email</a>
                 </div>
                 </div>

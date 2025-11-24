@@ -1,4 +1,5 @@
 import Logo from "/logo.png"
+import { NavLink } from "react-router-dom";
 function footer(){
     return(
         <>
@@ -9,11 +10,11 @@ function footer(){
                     <div className="hidden lg:flex flex-col">
                         <h1 className="text-orange-500 font-bold pb-2">LINKS</h1>
                         <ul>
-                            <li>Home</li>
-                            <li>Gallery</li>
-                            <li>Products</li>
-                            <li>Contact</li>
-                            <li>About</li>
+                            <li><NavLink to="/">Home</NavLink></li>
+                            <li><NavLink to="/gallery">Gallery</NavLink></li>
+                            <li><NavLink to="/products">Products</NavLink></li>
+                            <li><NavLink to="/contact">Contact</NavLink></li>
+                            <li><NavLink to="/about">About</NavLink></li>
                         </ul>
                     </div>
 
