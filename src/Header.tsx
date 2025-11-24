@@ -37,7 +37,7 @@ function Header() {
                     {["HOME", "GALLERY", "PRODUCTS", "CONTACT", "ABOUT"].map((item) => (
                         <li key={item} className="relative group px-2">
                             <NavLink
-                                to={item.toLowerCase() === "home" ? "//" : `/${item.toLowerCase()}`}
+                                to={item.toLowerCase() === "home" ? "/" : `/${item.toLowerCase()}`}
                                 className={({ isActive }) =>
                                     isActive ? "relative pb-1 border-y-2 border-orange-400" : "group relative pb-1"
                                 }
