@@ -6,7 +6,7 @@ function About(){
         <>
         <Header/>
         <main className="pt-20 md:pt-24 lg:pt-32">
-            <div className="flex flex-col w-full items-center my-10 bg-[url('../bg-1.png')] bg-cover bg-center">
+            <div className="flex flex-col w-full items-center my-10 bg-[url('../public/bg-1.png')] bg-cover bg-center">
                 <h1 className="text-3xl font-bold mb-4">About Us</h1>
                 <div className="md:w-1/2 w-3/4 text-left md:text-justify">
                     <p className="text-lg leading-relaxed mb-4">
