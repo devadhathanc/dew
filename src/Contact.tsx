@@ -53,7 +53,7 @@ function Contact(){
         <>
         <Header/>
         <main className="pt-32 md:pt-36 lg:pt-40">
-            <div className="flex justify-center items-start p-4 bg-[url('bg-1.png')] bg-cover bg-center">
+            <div className="flex justify-center items-start p-4 bg-[url('../public/bg-1.png')] bg-cover bg-center">
                 <div className="flex flex-col md:flex-row gap-10 p-3 w-full justify-center">
                     <div className="rounded-xl flex flex-col md:gap-7 gap-3">
                         <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-orange-500">Contact Us</h2>
