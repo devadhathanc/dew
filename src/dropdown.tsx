@@ -3,11 +3,11 @@ import { NavLink } from "react-router-dom";
 function Dropdown({ mobileOpen }: { mobileOpen: boolean }) {
     return (
         <>
-        <div className={`fixed right-0 flex justify-center items-center h-full w-[40%] md:hidden bg-white shadow-md pb-4 z-40
+        <div className={`fixed right-0 flex justify-center items-center h-full w-[40%] lg:hidden bg-white shadow-md pb-4 z-40
               transition-transform duration-500
               ${mobileOpen ? "translate-x-0" : "translate-x-full"}`}>
             <ul className="flex flex-col space-y-4 gap-4 text-center font-mono tracking-widest pt-4">
-                {["HOME", "GALLERY", "PRODUCTS", "ABOUT", "CONTACT"].map((item) => (
+                {["HOME", "GALLERY", "PRODUCTS", "CONTACT", "ABOUT"].map((item) => (
                     <li key={item} className="relative group px-4">
                         <NavLink
                             to={item.toLowerCase() === "home" ? "/" : `/${item.toLowerCase()}`}
