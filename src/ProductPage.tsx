@@ -34,15 +34,6 @@ function ProductPage(){
         fetchProduct();
     }, [slug]);
 
-    // useEffect(() => {
-    //     const onKey = (e: KeyboardEvent) => {
-    //     if (e.key === "ArrowRight") setIndex((p) => (p + 1) % images.length);
-    //     if (e.key === "ArrowLeft") setIndex((p) => (p - 1 + images.length) % images.length);
-    //     };
-    //     window.addEventListener("keydown", onKey);
-    //     return () => window.removeEventListener("keydown", onKey);
-    // }, [images.length]);
-
     if (loading) return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
 
     if (!product) {

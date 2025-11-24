@@ -9,10 +9,7 @@ import { useRef } from "react";
 function Contact(){
     const location = useLocation();
     const query = new URLSearchParams(location.search);
-    const productName = query.get("product") || "";
-    const productLink = "http://localhost:5173/dew/products/"+productName
-    const [requestedProduct, setRequest] = useState(productName);
-
+    const [productName, setProductName] = useState(query.get("product") || "");
     const formRef = useRef<HTMLFormElement>(null);
 
     const handleSubmit = (e: React.FormEvent) => {
@@ -94,26 +91,12 @@ function Contact(){
 
                         <label className="flex flex-col">
                             <span className="font-semibold">Product Name *</span>
-                            <input name="requestedProduct" type="text" className="border p-2 rounded" placeholder="Enter product name" defaultValue={requestedProduct} onChange={e => setRequest(e.target.value)} required/>
+                            <input name="requestedProduct" type="text" className="border p-2 rounded" placeholder="Enter product name" defaultValue={productName} onChange={e => setProductName(e.target.value)} required/>
                         </label>
 
                         <label className="flex flex-col">
                             <span className="font-semibold">Message</span>
-                            <div
-                                className="border p-2 rounded min-h-24"
-                                contentEditable
-                                suppressContentEditableWarning={true}
-                                dangerouslySetInnerHTML={{
-                                    __html: productName
-                                        ? `I would like to request the quote and delivery for <a href="${productLink}" target="_blank" class="text-blue-600 underline">${productName}</a>`
-                                        : `I would like to request the quote and delivery for ${requestedProduct}.`
-                                }}
-                            ></div>
-                            <textarea name="message" className="hidden" value={
-                                productName
-                                    ? `I would like to request the quote and delivery for ${productName} (${productLink})`
-                                    : `I would like to request the quote and delivery for ${requestedProduct}.`
-                            }></textarea>
+                            <textarea name="message" className="border p-2 rounded" value={`I would like to request the quote and delivery for ${productName}`}></textarea>
                         </label>
 
                         <button type="submit" className="bg-orange-400 text-white py-2 rounded">Submit</button>
