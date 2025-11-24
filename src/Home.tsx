@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Footer from "./Footer";
+import { NavLink } from "react-router-dom";
 function Home(){
     return(
         <>
@@ -10,7 +11,7 @@ function Home(){
                     <h1 className="font-sans text-5xl font-bold text-wrap text-white px-3 md:w-[50%]">Engineering Precision for Industrial Fabrications</h1>
                     <p className="text-1xl text-start text-white p-5 lg:w-[50%]">Manufacturers of Puddle Flanges, Vortex Inhibitors, Industrial Strainers, Vessel Tanks & Fabricated Components.</p>
                     <div className="group">
-                        <a href="./products" className="bg-white text-orange-500 font-mono font-bold px-5 py-3 mx-5 my-5 group-hover:bg-black border-orange-400 transition">Explore Products</a>
+                        <NavLink to="/products" className="bg-white text-orange-500 font-mono font-bold px-5 py-3 mx-5 my-5 group-hover:bg-black border-orange-400 transition">Explore Products</NavLink>
                     </div>
                     
                 </div>
@@ -19,7 +20,7 @@ function Home(){
             <div className="min-h-[60rem]">
                 <h2 className="text-3xl font-mono font-bold text-center my-10">CORE PRODUCTS</h2>
                 <div className="grid grid-flows-row md:grid-cols-3 grid-cols-2 gap-5 md:gap-10 justify-center items-center mx-10 my-10">
-                    <a href="./products/vortex-inhibitor">
+                    <NavLink to="/products/vortex-inhibitor">
                     <div className="group relative overflow-hidden h-[18rem] md:h-[22rem] lg:h-[26rem]" >
                         <img src="bg1.png" className="w-[22rem] absolute inset-0 m-auto max-w-full object-contain"/>
                         <h1 className="hidden group-hover:flex absolute inset-0 z-10 items-center justify-center px-5 py-2 text-center font-bold text-1xl md:texl-2xl lg:text-3xl font-mono">
@@ -30,8 +31,8 @@ function Home(){
                           className="absolute inset-0 m-auto w-[10rem] md:w-[13rem] lg:w-[15rem] max-w-full object-contain transition-transform duration-300 group-hover:scale-110"
                         />
                     </div>
-                    </a>
-                    <a href="./products/puddle-flange">
+                    </NavLink>
+                    <NavLink to="/products/puddle-flange">
                         <div className="group relative overflow-hidden h-[18rem] md:h-[22rem] lg:h-[26rem]">
                             <img src="bg2.png" className="w-[22rem] absolute inset-0 m-auto max-w-full object-contain"/>
                             <div className="hidden group-hover:flex absolute inset-0 z-10 items-center justify-center px-5 py-2 text-center font-bold text-1xl md:texl-2xl lg:text-3xl font-mono">
@@ -42,8 +43,8 @@ function Home(){
                             className="absolute inset-0 m-auto w-[10rem] md:w-[13rem] lg:w-[15rem] max-w-full object-contain transition-transform duration-300 group-hover:scale-110"
                             />
                         </div>
-                    </a>
-                    <a href="/products/anti-vortex-plate">
+                    </NavLink>
+                    <NavLink to="/products/anti-vortex-plate">
                     <div className="group relative overflow-hidden h-[18rem] md:h-[22rem] lg:h-[26rem]">
                         <img src="bg3.png" className="w-[22rem] absolute inset-0 m-auto max-w-full object-contain"/>
                         <div className="hidden group-hover:flex absolute inset-0 z-10 items-center justify-center px-5 py-2 text-center font-bold text-1xl md:texl-2xl lg:text-3xl font-mono">
@@ -54,8 +55,8 @@ function Home(){
                           className="absolute inset-0 m-auto w-[10rem] md:w-[13rem] lg:w-[15rem] max-w-full object-contain transition-transform duration-300 group-hover:scale-110"
                         />
                     </div>
-                    </a>
-                    <a href="./products/pressure-vessels">
+                    </NavLink>
+                    <NavLink to="/products/pressure-vessels">
                     <div className=" group relative overflow-hidden h-[18rem] md:h-[22rem] lg:h-[26rem] ">
                         <img src="bg4.png" className="w-[22rem] absolute inset-0 m-auto max-w-full object-contain"/>
                         <h1 className="hidden group-hover:flex absolute inset-0 z-10 items-center justify-center px-5 py-2 text-center font-bold text-1xl md:texl-2xl lg:text-3xl font-mono">
@@ -66,8 +67,8 @@ function Home(){
                           className="absolute inset-0 m-auto w-[10rem] md:w-[13rem] lg:w-[25rem] max-w-full object-contain transition-transform duration-300 group-hover:scale-110"
                         />
                     </div>
-                    </a>
-                    <a href="./products/filters">
+                    </NavLink>
+                    <NavLink to="/products/filters">
                     <div className="group relative overflow-hidden h-[18rem] md:h-[22rem] lg:h-[26rem]">
                         <img src="bg5.png" className="w-[22rem] absolute inset-0 m-auto max-w-full object-contain"/>
                         <div className="hidden group-hover:flex absolute inset-0 z-10 items-center justify-center px-5 py-2 text-center font-bold text-1xl md:texl-2xl lg:text-3xl font-mono">
@@ -78,8 +79,8 @@ function Home(){
                           className="absolute inset-0 m-auto w-[11rem] md:w-[15rem] lg:w-[17rem] max-w-full object-contain transition-transform duration-300 group-hover:scale-110"
                         />
                     </div>
-                    </a>
-                    <a href="products/pipe-bending-services">
+                    </NavLink>
+                    <NavLink to="/products/pipe-bending-services">
                     <div className="group relative overflow-hidden h-[18rem] md:h-[22rem] lg:h-[26rem]">
                         <img src="bg6.png" className="w-[22rem] absolute inset-0 m-auto max-w-full object-contain"/>
                         <div className="hidden group-hover:flex absolute inset-0 z-10 items-center justify-center px-5 py-2 text-center font-bold text-1xl md:texl-2xl lg:text-3xl font-mono">
@@ -90,7 +91,7 @@ function Home(){
                           className="absolute inset-0 m-auto w-[10rem] md:w-[13rem] lg:w-[15rem] max-w-full object-contain transition-transform duration-300 group-hover:scale-110"
                         />
                     </div>
-                    </a>
+                    </NavLink>
                 </div>
                 {/* <div className="flex flex-col gap-10"> */}
                     {/* <div className="flex flex-wrap justify-center items-center">
