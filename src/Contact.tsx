@@ -9,7 +9,7 @@ import Loading from "/assets/strainer.png";
 function Contact(){
     const location = useLocation();
     const query = new URLSearchParams(location.search);
-    const [productName, setProductName] = useState(query.get("product") || "");
+    const [productName, setProductName] = useState(query.get("product") || "your product");
     const formRef = useRef<HTMLFormElement>(null);
     const [isSending, setIsSending] = useState(false);
 
