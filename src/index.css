@@ -13,3 +13,20 @@
     font-display: swap; /* Optional: for better font loading */
     }
 }
+
+.fade-slide-image {
+  opacity: 0;
+  animation: fade 8s infinite;
+}
+
+.fade-slide-image.delay {
+  animation-delay: 4s;
+}
+
+@keyframes fade {
+  0% { opacity: 1; }
+  45% { opacity: 1; }
+  50% { opacity: 0; }
+  95% { opacity: 0; }
+  100% { opacity: 1; }
+}

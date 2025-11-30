@@ -28,13 +28,13 @@ function ProductPage(){
                 setProduct(null);
             } else {
                 setProduct(data[0]);
+                document.title = data[0].name;
             }
             setLoading(false);
         };
         fetchProduct();
     }, [slug]);
-
-    if (loading) return <div className="min-h-screen flex items-center justify-center"><img src="/strainer.png" className="animate-spin w-20 h-20"/></div>;
+    if (loading) return <div className="min-h-screen flex items-center justify-center"><img src="/assets/strainer.png" className="animate-spin w-20 h-20"/></div>;
 
     if (!product) {
         return (

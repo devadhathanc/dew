@@ -1,7 +1,7 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
 import { createClient } from "@supabase/supabase-js";
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
@@ -36,6 +36,10 @@ function Products(){
             if (!error) setProducts(data || []);
         };
         fetchProducts();
+    }, []);
+
+    useEffect(() => {
+        document.title = "Products";
     }, []);
     return(
         <>

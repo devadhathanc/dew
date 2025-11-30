@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect  } from "react";
 import Header from "./Header";
 import { useLocation } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
-
+import Loading from "/assets/strainer.png";
 
 
 function Contact(){
@@ -11,9 +11,11 @@ function Contact(){
     const query = new URLSearchParams(location.search);
     const [productName, setProductName] = useState(query.get("product") || "");
     const formRef = useRef<HTMLFormElement>(null);
+    const [isSending, setIsSending] = useState(false);
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+        setIsSending(true);
 
         if (!formRef.current) return;
 
@@ -26,12 +28,8 @@ function Contact(){
             )
             .then(
                 () => {
-                    alert("Email sent successfully!");
+                    setIsSending(false);
                 },
-                (error) => {
-                    alert("Failed to send email.");
-                    console.error(error);
-                }
             );
         // Send to customer
         emailjs
@@ -42,18 +40,19 @@ function Contact(){
                 "ieDiUL3iDJGmCwjD7"
             )
             .then(
-                () => {},
-                (error) => {
-                    console.error(error);
-                }
+                () => {
+                    setIsSending(false);
+                },
             );
     };
-
+    useEffect(() => {
+        document.title = "Contact Us";
+    }, []);
     return(
         <>
         <Header/>
         <main className="pt-32 md:pt-36 lg:pt-40">
-            <div className="flex justify-center items-start p-4 bg-[url('../public/bg-1.png')] bg-cover bg-center">
+            <div className="flex justify-center items-start p-4 bg-[url('../public/assets/pencil_bg.png')] bg-cover bg-center">
                 <div className="flex flex-col md:flex-row gap-10 p-3 w-full justify-center">
                     <div className="rounded-xl flex flex-col md:gap-7 gap-3">
                         <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-orange-500">Contact Us</h2>
@@ -96,10 +95,20 @@ function Contact(){
 
                         <label className="flex flex-col">
                             <span className="font-semibold">Message</span>
-                            <textarea name="message" className="border p-2 rounded" value={`I would like to request the quote and delivery for ${productName}`}></textarea>
+                            <textarea name="message" className="border p-2 rounded" placeholder={`Specify your requirements for ${productName}`}></textarea>
                         </label>
 
-                        <button type="submit" className="bg-orange-400 text-white py-2 rounded">Submit</button>
+                        <button
+                          type="submit"
+                          className="bg-orange-400 text-white py-2 rounded flex justify-center items-center gap-2"
+                          disabled={isSending}
+                        >
+                          {isSending ? (
+                            <img src={Loading} alt="loading" className="h-6 w-6 animate-spin" />
+                          ) : (
+                            "Submit"
+                          )}
+                        </button>
                     </form>
                 </div>
             </div>

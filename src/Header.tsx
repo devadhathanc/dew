@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Dropdown from "./dropdown";
-import Logo from "/logo.png"
-import Menu from "/strainer.png"
+import Logo from "/assets/logo.png"
+import Menu from "/assets/strainer.png"
 
 function Header() {
     const [scrollY, setScrollY] = useState(false);
