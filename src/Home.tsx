@@ -51,9 +51,11 @@ function Home(){
         <Header />
         <main className="pt-32 md:pt-36 lg:pt-40">
             <div className="flex relative  min-h-[50rem] w-full">
-                <div className="absolute flex flex-col z-0 top-[10rem] md:top-32 items-start justify-center bg-orange-500 h-[40rem] mx-5 md:justify-around">
-                    <h1 className="font-sans text-5xl font-bold text-wrap text-white px-3 md:w-[50%]">Engineering Precision for Industrial Fabrications</h1>
-                    <p className="text-1xl text-start text-white p-5 lg:w-[50%]">Manufacturers of Puddle Flanges, Vortex Inhibitors, Industrial Strainers, Vessel Tanks & Fabricated Components.</p>
+                <div className="absolute flex flex-col z-0 top-[10rem] md:top-32 items-start justify-center bg-orange-500 h-[40rem] mx-5 lg:justify-around">
+                    <h1 className="font-sans text-5xl font-bold text-wrap text-white px-3 md:w-[50%]">Quality You Can Trust. Precision You Can See.</h1>
+                    <p className="text-1xl text-start text-white p-5 lg:w-[40%]">
+                        For Over 30 Years, We’ve Engineered Excellence. Delivering World-Class Industrial Fabrications Including Puddle Flanges, Vortex Inhibitors, Strainers, Pressure Vessels, Pipe Bends, and Custom Engineered Components.
+                    </p>
                     <div className="group">
                         <NavLink to="/products" className="bg-white text-orange-500 font-mono font-bold px-5 py-3 mx-5 my-5 group-hover:bg-black border-orange-400 transition">Explore Products</NavLink>
                     </div>
